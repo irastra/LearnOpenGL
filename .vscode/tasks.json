@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe OpenGL",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I${fileDirname}/../include",
+                "-L${fileDirname}/../lib",
+                "-l",
+                "glad",
+                "-l",
+                "glfw3",
+                "-l",
+                "glu32",
+                "-l",
+                "opengl32",
+                "-l",
+                "gdi32"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        },
+    ],
+    "version": "2.0.0"
+}
