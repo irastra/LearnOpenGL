@@ -3,12 +3,14 @@
 #include <mywindow.h>
 #include <myconst.h>
 #include <myshader.h>
+#include <myutil.h>
 #include <iostream>
 
 using MyRender::Shader;
 using MyRender::processInput;
 using MyRender::terminate_window;
 using MyRender::init_window;
+using MyUtil::get_res_path;
 int main()
 {
     GLFWwindow* window = init_window();
@@ -19,8 +21,8 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-    Shader shader = Shader("C:/Users/zhangxu01/Documents/git/OpenGL/shader/2.0.shader.vs", "C:/Users/zhangxu01/Documents/git/OpenGL/shader/2.0.shader.fs");
-    std::cout << shader.ID << std::endl;
+
+    Shader shader = Shader(get_res_path("shader/2.0.shader.vs"), get_res_path("shader/2.0.shader.fs"));
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------

@@ -5,12 +5,16 @@
 #include <sstream>
 #include <iostream>
 namespace MyRender{
+    using std::string;
     class Shader{
         public:
         unsigned int ID;
-        Shader(const char * vertexPath, const char * fragmentPath){
-            std::string vertextCode;
-            std::string fragmentCode;
+        Shader(string vertextPath, string fragmentPath){
+            Init(vertextPath.c_str(), fragmentPath.c_str());
+        }
+        void Init(const char * vertexPath, const char * fragmentPath){
+            string vertextCode;
+            string fragmentCode;
             std::ifstream vShaderFile;
             std::ifstream fShaderFile;
             vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
