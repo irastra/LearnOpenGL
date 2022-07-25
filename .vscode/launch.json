@@ -13,5 +13,18 @@
             "externalConsole": false,
             "preLaunchTask": "C/C++: g++.exe OpenGL"
         },
+        {
+            "name": "C/C++: clang++ 生成和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: ZX Clang OpenGL"
+        }
     ]
 }
