@@ -93,8 +93,8 @@ int main(){
     }
     stbi_image_free(data);
     shader.use();
-    shader.SetInt("texture1", 0);
-    shader.SetInt("texture2", 1);
+    shader.setInt("texture1", 0);
+    shader.setInt("texture2", 1);
     while(!glfwWindowShouldClose(window)){
         processInput(window);
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
