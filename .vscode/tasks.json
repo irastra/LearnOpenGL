@@ -39,6 +39,8 @@
                 "-I${fileDirname}/../include",
                 "-L${fileDirname}/../lib",
                 "-l",
+                "assimp",
+                "-l",
                 "glad",
                 "-l",
                 "glfw3",
@@ -47,7 +49,7 @@
                 "-l",
                 "opengl32",
                 "-l",
-                "gdi32"
+                "gdi32",
             ],
             "options": {
                 "cwd": "${fileDirname}"
