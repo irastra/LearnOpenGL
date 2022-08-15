@@ -2,6 +2,45 @@
     "tasks": [
         {
             "type": "cppbuild",
+            "label": "C/C++: Linux g++ OpenGL",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I${fileDirname}/../include",
+                "-L${fileDirname}/../lib/linux",
+                "Wl,-rpath=${fileDirname}/../lib/linux",
+                "-l",
+                "assimp",
+                "-l",
+                "glad",
+                "-l",
+                "glfw3",
+                "-l",
+                "GL",
+                "-l",
+                "GLU",
+                "-l",
+                "dl",
+                "-l",
+                "X11",
+                "-l",
+                "pthread"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "cppbuild",
             "label": "C/C++: ZX Clang OpenGL",
             "command": "/usr/bin/clang++",
             "args": [
@@ -49,7 +88,7 @@
                 "-l",
                 "opengl32",
                 "-l",
-                "gdi32",
+                "gdi32"
             ],
             "options": {
                 "cwd": "${fileDirname}"
