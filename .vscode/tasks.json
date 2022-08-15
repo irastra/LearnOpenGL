@@ -12,9 +12,6 @@
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "-I${fileDirname}/../include",
                 "-L${fileDirname}/../lib/linux",
-                "Wl,-rpath=${fileDirname}/../lib/linux",
-                "-l",
-                "assimp",
                 "-l",
                 "glad",
                 "-l",
@@ -28,7 +25,10 @@
                 "-l",
                 "X11",
                 "-l",
-                "pthread"
+                "pthread",
+                "-l",
+                "assimp",
+                "-Wl,-rpath=${fileDirname}/../lib/linux"
             ],
             "options": {
                 "cwd": "${fileDirname}"
