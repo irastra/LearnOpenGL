@@ -87,7 +87,7 @@ int main()
     // -----------
     //Model ourModel(get_res_path("objects/Taunt.fbx").c_str());
 
-    Model ourModel(get_res_path("objects/nanosuit/nanosuit.obj").c_str());
+    Model ourModel(get_res_path("objects/Taunt.fbx").c_str());
 
 
     
